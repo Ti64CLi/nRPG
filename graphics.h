@@ -28,9 +28,7 @@ typedef struct
 } tilemap_t;
 
 void gFillScreen(buffer_t *screen_buffer, uint16_t color);
-// void gDrawSpriteNoClip(buffer_t *screen_buffer, uint16_t x, uint16_t y, sprite_t sprite, uint8_t zoom);
 void gDrawSprite(buffer_t *screen_buffer, uint16_t x, uint16_t y, sprite_t sprite, uint8_t zoom);
-// void gDrawTileMapNoClip(buffer_t *screen_buffer, tilemap_t tilemap, uint16_t x, uint16_t y, uint16_t tilemap_x, uint16_t tilemap_y, uint16_t tilemap_w, uint16_t tilemap_h, uint8_t zoom);
 void gDrawTileMap(buffer_t *screen_buffer, tilemap_t tilemap, uint16_t x, uint16_t y, uint16_t tilemap_x, uint16_t tilemap_y, uint16_t tilemap_w, uint16_t tilemap_h, uint8_t zoom, int8_t xoffset, int8_t yoffset);
 
 #endif

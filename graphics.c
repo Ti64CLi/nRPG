@@ -14,23 +14,6 @@ void gFillScreen(buffer_t *screen_buffer, uint16_t color)
     }
 }
 
-/*void gDrawSpriteNoClip(buffer_t *screen_buffer, uint16_t x, uint16_t y, sprite_t sprite, uint8_t zoom)
-{
-    for (uint16_t i = 0; i < sprite.height; i++)
-    {
-        for (uint16_t j = 0; j < sprite.width; j++)
-        {
-            for (uint8_t iz = 0; iz < zoom; iz++)
-            {
-                for (uint8_t jz = 0; jz < zoom; jz++)
-                {
-                    screen_buffer->buffer[(i * zoom + y + iz) * screen_buffer->width + x + j * zoom + jz] = sprite.data[i * sprite.width + j];
-                }
-            }
-        }
-    }
-}*/
-
 void gDrawSprite(buffer_t *screen_buffer, uint16_t x, uint16_t y, sprite_t sprite, uint8_t zoom)
 {
     for (uint16_t i = 0; i < sprite.height; i++)
@@ -49,17 +32,6 @@ void gDrawSprite(buffer_t *screen_buffer, uint16_t x, uint16_t y, sprite_t sprit
         }
     }
 }
-
-/*void gDrawTileMapNoClip(buffer_t *screen_buffer, tilemap_t tilemap, uint16_t x, uint16_t y, uint16_t tilemap_x, uint16_t tilemap_y, uint16_t tilemap_w, uint16_t tilemap_h, uint8_t zoom)
-{
-    for (uint16_t i = 0; i < tilemap_h; i++)
-    {
-        for (uint16_t j = 0; j < tilemap_w; j++)
-        {
-            gDrawSpriteNoClip(screen_buffer, x + j * tilemap.tile_width * zoom, y + i * tilemap.tile_height * zoom, tilemap.tiles[tilemap.tilemap[(i + tilemap_y) * tilemap.width + j + tilemap_x]], zoom);
-        }
-    }
-}*/
 
 void gDrawTileMap(buffer_t *screen_buffer, tilemap_t tilemap, uint16_t x, uint16_t y, uint16_t tilemap_x, uint16_t tilemap_y, uint16_t tilemap_w, uint16_t tilemap_h, uint8_t zoom, int8_t xoffset, int8_t yoffset)
 {
